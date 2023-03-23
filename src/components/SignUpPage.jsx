@@ -2,8 +2,7 @@
 import React from 'react'
 import { Button, Col, Container, FloatingLabel, Form, Row } from 'react-bootstrap'
 import { useForm } from 'react-hook-form'
-
-
+import { useNavigate } from 'react-router-dom'
 
 // https://www.youtube.com/watch?v=FY8sXCsjvf8
 const SignUpPage = () => {
@@ -16,19 +15,24 @@ const SignUpPage = () => {
     // var regExPwd = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#%^&])(?!.* ).{8,20}$/
 
     const SignUp = (formData, e) => {
-        // async function SignUp(event){
+        // async function SignUp(e){
         e.preventDefault()
         console.log(formData);
+    }
 
+    const navigate = useNavigate();
+
+    const routeToLogin = () => {
+        navigate("/login")
     }
 
     return (
-        <Container fluid    >
+        <Container     >
             <Row className="mt-4  pt-4">
                 <Col lg={4} md={6} sm={9} className="p-3 m-auto shadow-lg rounded-lg bg-light">
                     <Form className='bg-light' onSubmit={handleSubmit(SignUp)} >
-                        <h4 className='text-center ' >Wallet Pay</h4>
-                        <h6 className='mb-3 text-center ' >Join us! To enjoy the best financial service for your Life</h6>
+                        <h4 className='text-center ' >Sign Up</h4>
+                        <h6 className='mb-3 text-center ' >Join us!</h6>
                         <FloatingLabel controlId="UserEmail" label="Email Address" className="mb-3" autoComplete="off" >
                             <Form.Control type="email" placeholder="name@example.com"
                                 {...register('useremail', { required: true, pattern: /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/ })}
@@ -106,13 +110,9 @@ const SignUpPage = () => {
                             <Button type='reset' variant="warning" className='mb-2 mt-2 btn-block' >Reset</Button>
                         </div>
                         <div className='text-center mt-3'>
-                            <h6>Already have an account?</h6>
-                            <Button variant="secondary" className='mb-3' >Login</Button>
+                            <h6>Have an account?</h6>
+                            <Button variant="secondary" className='mb-3' onClick={routeToLogin} >Login</Button>
 
-                        </div>
-                        <div className='text-center'>
-
-                            <Button variant="success" className='mb-3' >Back to Home</Button>
                         </div>
                     </Form>
                 </Col>
