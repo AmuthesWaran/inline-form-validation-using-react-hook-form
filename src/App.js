@@ -6,10 +6,14 @@ import SignUpPage from "./components/SignUpPage";
 function App() {
   return (
     <div>
+
       <Routes>
+
         <Route path='/' element={<SignUpPage />} />
         <Route path='/login' element={<Login />} />
+
       </Routes>
+
     </div>
   );
 }

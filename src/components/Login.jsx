@@ -23,6 +23,7 @@ const Login = () => {
                     <Form className='bg-light' onSubmit={handleSubmit(LoginClick)} >
                         <h4 className='text-center' >Login</h4>
                         <h6 className='mb-3 text-center ' >Welcome back!</h6>
+
                         <FloatingLabel controlId="useremail" label="Useremail" className="mb-3" autoComplete="off" >
                             <Form.Control type="email" {...register('username')} placeholder="name@example.com" />
                             <Form.Control.Feedback type='invalid'>
@@ -42,15 +43,17 @@ const Login = () => {
                                 {errors.password?.type === 'pattern' && `Your password should contain atleast 8 characters.Must Contain 1 uppercase, 1 lowercase, 1 numeric and atleast 1 symbols ( @ # % ^ & - _ )`}
                             </Form.Control.Feedback>
                         </FloatingLabel>
+
                         <div className='text-center span2'>
 
                             <Button type='submit' variant="primary" className='mb-2 mt-2 m-3 btn-block ' >Login</Button>
-
                             <Button type='reset' variant="warning" className='mb-2 mt-2 btn-block ' >Reset</Button>
                         </div>
+
                         <div className='text-center mt-2 '>
                             {/* <Link to="/forgotpassword" >Forgot Password?</Link> */}
                         </div>
+
                         <div className='text-center mt-3 '>
                             <h6>Don't have an account?</h6>
                             <Button variant="secondary" className='mb-3' onClick={routeToSignUp} >Sign Up</Button>
@@ -58,7 +61,6 @@ const Login = () => {
                     </Form>
 
                 </Col>
-
             </Row>
         </Container>
 
