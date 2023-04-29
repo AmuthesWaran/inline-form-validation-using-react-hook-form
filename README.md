@@ -1,1 +1,2 @@
-# inline-form-validation-using-react-hook-form
+# Inline Form Validation using react-hook-form
+A simple responsive Login and Sign Up form with inline field validations.

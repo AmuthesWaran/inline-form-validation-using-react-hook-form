@@ -5,10 +5,12 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
-    const { register, handleSubmit, watch, formState: { errors }, trigger } = useForm()
+    const { register, handleSubmit,
+        // watch, 
+        formState: { errors }, trigger } = useForm()
 
     const LoginClick = data => console.log(data);
-    console.log(watch('username'));
+    // console.log(watch('username'));
 
     const navigate = useNavigate();
 
