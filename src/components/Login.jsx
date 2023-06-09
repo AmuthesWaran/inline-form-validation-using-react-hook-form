@@ -57,7 +57,7 @@ const Login = () => {
                         </div>
 
                         <div className='text-center mt-3 '>
-                            <h6>Don't have an account?</h6>
+                            <h6>New User?</h6>
                             <Button variant="secondary" className='mb-3' onClick={routeToSignUp} >Sign Up</Button>
                         </div>
                     </Form>

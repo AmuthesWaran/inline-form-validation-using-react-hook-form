@@ -140,7 +140,7 @@ const SignUpPage = () => {
                         </div>
 
                         <div className='text-center mt-3'>
-                            <h6>Have an account?</h6>
+                            <h6>Already having an account?</h6>
                             <Button variant="secondary" className='mb-3' onClick={routeToLogin} >Login</Button>
 
                         </div>
